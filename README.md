@@ -10,23 +10,6 @@
 
 **不同模型擅长不同的事，按任务分派到最合适的 Agent，并行执行，不互相等待。**
 
-四套顶层架构共享同一个底层逻辑：
-
-```
-一道题 ──→ math-brainstorm (思路发散) ──→ 解题方案
-        └─→ brute-force-think (竞赛求解) ─┘
-                        │
-                        ▼
-              multi-agent-pipeline (编码实现)
-                        │
-                        ▼
-              5writing + 6verity (论文+验收)
-
-APK 文件 ──→ apk-forensics (独立分支)
-```
-
----
-
 ## 🏗️ 四套核心架构
 
 ### 1. math-brainstorm — 数模三人脑暴
