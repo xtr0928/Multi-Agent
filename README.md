@@ -2,15 +2,23 @@
 
 > 一套基于 Hermes Agent 的多模型协作架构，包含代码编写与数学建模的工作流
 
+<div align="center">
+
+![Skills](https://img.shields.io/badge/Skills-28-2563eb?style=flat-square)
+![Models](https://img.shields.io/badge/Models-4-16a34a?style=flat-square)
+![Architectures](https://img.shields.io/badge/Architectures-5-e11d48?style=flat-square)
+![Contests](https://img.shields.io/badge/Contests-MCM%2FCUMCM-8b5cf6?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-6b7280?style=flat-square)
+
+**不同模型擅长不同的事，按任务分派到最合适的 Agent，并行执行，不互相等待。**
+
+</div>
+
 > 如何快速部署：下载安装包以后丢给ai，“你给我部署好这个”，就可以了(
 
 ---
 
-## 🎯 核心理念
-
-**不同模型擅长不同的事，按任务分派到最合适的 Agent，并行执行，不互相等待。**
-
-## 🏗️ 四套核心架构
+## 🏗️ 五套核心架构
 
 ### 1. math-brainstorm — 数模三人脑暴
 
@@ -57,7 +65,29 @@ Phase 4: DeepSeek 汇总两类意见 → 应用修复 → 集成验证
 - **10+ 文件策略**：仅 Phase 1，跳过 Phase 2-3，Solo 编码（context 成本 > 并行收益）
 - **GLM 特殊降级**：30s 无输出 → 重启一次 → 再 30s 仍无输出 → kill 切 Solo
 
-### 4. APK 取证模式
+### 4. mathmodel-v2-pipeline — 数模竞赛全流程融合架构 ⭐ NEW
+
+> 吸收 12+ 开源数模 Agent 项目与泛竞赛/科研 Agent 经验后的理想编排，产出可直接提交的论文（DOCX/PDF）。
+
+```
+PHASE -1  模式选择   —— 全自动暴力解题 or 逐题人工把关？→ mode.json
+PHASE 0   六维选题   —— 数学类型/数据可得/算法复杂度/评价清晰度/写作难度/团队匹配
+PHASE 1   问题解析   —— 题目结构化 / 问题分类 / 数据画像（三线并行）
+PHASE 2   建模辩论   —— 建模手 A/B/C + 假设官 → 收敛门（差异<20%，≤3 轮）
+PHASE 3   编码求解   —— 写→跑→修（≤30 轮）+ 反思器 + 完成度检查 + 基线对照
+PHASE 3.5 基准反馈   —— 交叉验证 vs 基线 ⟲ 不达标回环 PHASE 2（≤2 轮）
+PHASE 4   证据链     —— 🔢数值验证 → 🔏证据门禁(SHA-256) → 🛡诚信门控(7类) → 👁K3视觉审查
+PHASE 5   论文写作   —— 论文手(全局) + 微单元扩写 → final_paper_source.md
+PHASE 6   评审门禁   —— 五人评审团(≥65 分) + 🔍格式门禁 + Rebuttal 修订(≤3 轮)
+PHASE 7   排版交付   —— LaTeX→OMML 原生公式 + 三线表 → DOCX/PDF + 提交包 ZIP
+```
+
+- **双模式**：Autopilot（全自动暴力解题）/ Manual（Friendly Mode 编号选项人工把关）
+- **环形架构**：内部基准反馈环——结果质量驱动迭代，不是单向流水线
+- **确定性验证**：数值验证门禁（随机采样/sympy 符号比对）取代 LLM 自查，「可证性 > 概率性」
+- 详见 `skills/data-science/mathmodel-v2-pipeline/SKILL.md`
+
+### 5. APK 取证模式
 
 针对 Android APK 逆向工程的专业工作流。
 
@@ -86,12 +116,13 @@ Phase 4: DeepSeek 汇总两类意见 → 应用修复 → 集成验证
 
 ---
 
-## 📦 Skills 清单（27 个）
+## 📦 Skills 清单（28 个）
 
 ### 🏗️ 自建核心架构
 
 | Skill | 用途 | 位置 |
 |-------|------|------|
+| **mathmodel-v2-pipeline** ⭐ | 数模竞赛全流程融合架构 v2.2（双模式/反馈环/确定性验证） | `skills/data-science/mathmodel-v2-pipeline/` |
 | **multi-agent-pipeline** | 多 Agent 协同编程流水线（v2，含 Kimi K3） | `skills/multi-agent-pipeline/` |
 | **math-brainstorm** | 数模三人脑暴 | `skills/data-science/math-brainstorm/` |
 | **brute-force-think** | 暴力思考迭代收敛 | `skills/data-science/brute-force-think/` |
@@ -160,6 +191,7 @@ Phase 4: DeepSeek 汇总两类意见 → 应用修复 → 集成验证
 |---------|---------|------|
 | "给个思路""怎么建模""方案设计" | math-brainstorm | 1 轮并行脑暴 |
 | "正式解题""竞赛求解""深度分析" | brute-force-think | 多轮迭代收敛 |
+| **"数模全流程""从题到论文""自动写论文"** | **mathmodel-v2-pipeline ⭐** | **10 阶段融合架构（双模式/反馈环/确定性验证）** |
 | "写代码""实现""开发""重构" | multi-agent-pipeline | 4 阶段流水线 |
 | **10+ 文件重写/重构** | **仅 Phase 1** | context 成本 > 并行收益 |
 | "全流程""从题到论文" | 6 阶段 Pipeline | 分析→编码→画图→论文→验收 |
@@ -208,6 +240,7 @@ openscore/
     │   ├── SKILL.md
     │   └── references/              ← 实战经验沉淀库
     ├── data-science/
+    │   ├── mathmodel-v2-pipeline/    ← 数模全流程融合架构（v2.2 ⭐）
     │   ├── math-brainstorm/          ← 数模脑暴
     │   ├── brute-force-think/        ← 暴力思考
     │   ├── apk-forensics/            ← APK 取证
@@ -282,6 +315,8 @@ hermes profile list
 | 2026-07-20 | 安装 CLI-Anything 集成 |
 | 2026-07-27 | multi-agent-pipeline v2：Kimi K3 接管多模态视觉审查 |
 | 2026-07-27 | SOUL.md 大规模审计修复（9 项 P1/P2 缺陷修复） |
+| 2026-08-04 | SOUL.md 瘦身 14KB→6KB 任务路由版；新增开发前调研硬规则 |
+| 2026-08-09 | **mathmodel-v2-pipeline：数模全流程融合架构 v2.2**（调研 12+ 开源项目后沉淀：双模式/基准反馈环/数值验证门禁/五人评审团） |
 
 ---
 
