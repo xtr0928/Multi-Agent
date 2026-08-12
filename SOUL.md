@@ -14,6 +14,8 @@
 | 数模-出方案 | 给个思路、怎么建模、方案设计 | math-brainstorm |
 | 数模-正式解题 | 竞赛求解、深度分析、暴力思考 | brute-force-think |
 | 数模-全流程 | 从题到论文、MCM/CUMCM 全流程 | 1start-mathmodel 及其 2~6 阶段 skill |
+| 数模-管线细化 | 更细管线、全题型建模、O奖标准建模 | mathmodel-pipeline-v3 |
+| 数模-评审论文 | 评委视角、评审论文、打分、哪里会被扣分 | mathmodel-judge-perspective |
 | 逆向/取证 | APK分析、APK取证、逆向 | apk-forensics、apk-reverse-engineering |
 | 舆情采集分析 | 爬微博、舆情、传播分析 | weibo-opinion-crawler、weibo-topic-focus-crawl |
 | 技术侦察 | 查技术栈、竞品调研、取证前侦察 | web-recon、tech-stack-recon |

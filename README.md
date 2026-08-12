@@ -4,10 +4,11 @@
 
 <div align="center">
 
-![Skills](https://img.shields.io/badge/Skills-28-2563eb?style=flat-square)
+![Skills](https://img.shields.io/badge/Skills-30-2563eb?style=flat-square)
 ![Models](https://img.shields.io/badge/Models-4-16a34a?style=flat-square)
-![Architectures](https://img.shields.io/badge/Architectures-5-e11d48?style=flat-square)
+![Architectures](https://img.shields.io/badge/Architectures-7-e11d48?style=flat-square)
 ![Contests](https://img.shields.io/badge/Contests-MCM%2FCUMCM-8b5cf6?style=flat-square)
+![Benchmark](https://img.shields.io/badge/Benchmark-55%E9%A2%98%E5%AE%9E%E6%B5%8B-2ea44f?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-6b7280?style=flat-square)
 
 **不同模型擅长不同的事，按任务分派到最合适的 Agent，并行执行，不互相等待。**
@@ -101,6 +102,40 @@ PHASE 7   排版交付   —— LaTeX→OMML 原生公式 + 三线表 → DOCX/P
 - **场景**："APK 分析""APK 取证""逆向"
 - **关键规则**：ZIP 伪加密 → zlib.decompress / MSYS 路径 → cmd //c 绕过 / Flutter APP → VPN 代理
 
+### 6. mathmodel-pipeline-v3 — 数模管线执行手册（全题型实证版）⭐ NEW
+
+> **55 题全量实战批测驱动升级**：2016-2025 全部真题独立求解 + 七维评委打分（平均 80.4，O×2/M×47/H×6），用真实失败数据反推硬规则。
+
+```
+实战发现（54 份报告统计）：
+  🔴 灵敏度不完整 93% → 规则C: ≥6参数 × ±20% 完整矩阵 + 排序稳健性声明
+  🔴 无真实数据 91%   → 规则D: 无数据题三选一辩护（官方数据/合成+锚点/机理+解析互证）
+  🔴 假设辩护弱 87%   → 规则E: 自查清单纳入交付物（七维自评+HARD FAIL十项+数字核对）
+  🔴 图密度 100% 不足 → 规则B: 图密度门禁 ≥5 张（O奖均值21图），每图编号+引用+结论标题
+  🟡 交付中断 ~20%   → 规则A: 交付优先序反转（先报告框架→建模→补图），2022B 补报告 43→70 分
+```
+
+- **全题型六路线判别**：A机理/B工程/C数据/D网络/E环境/F社科 → 路线决定建模方法（437 篇 O 奖实证）
+- **O 档配方**（2017D/2021D 两个 91 分反推）：真数据 + 双模型互证（偏差<5%）+ 外部锚点验证 + 核对脚本 + 图≥5
+- 详见 `skills/data-science/mathmodel-pipeline-v3/SKILL.md`（含流程图 flowchart.html/png）
+
+### 7. mathmodel-judge-perspective — 数模评委视角评价 ⭐ NEW
+
+> **站在评委立场反向审视论文**：437 篇 O 奖全量精读（2012-2025 全题型，18 组 287KB 笔记）+ 官方评审指南实证 + 55 题实战校准。
+
+```
+七维评分体系（权重经验估计）：
+  摘要15% / 建模25% / 完整性20% / 验证15% / 写作10% / 图表10% / 创新5%
+HARD FAIL 红线（任一命中直接降档）：
+  🔴 编造数据/引用不实 / 摘要正文数字不一致 / 子问题漏答
+  🔴 仅1模型无基线对照 / 摘要零数字 / 灵敏度只声明不量化（437篇实证铁律）
+16/16 组全票铁律：多模型互证100% / 数字摘要100% / 验证弱100% / 数据缺100%
+```
+
+- **美赛+国赛双视角**：美赛四段式摘要 vs 国赛逐问回答式（2015A 特等奖实证）
+- **评分校准**：真数据+双模型+锚点+核对脚本 → 85+ 起评；仅合成数据+灵敏度齐全 → 78-82
+- 详见 `skills/data-science/mathmodel-judge-perspective/SKILL.md`
+
 ---
 
 ## 🤖 四个模型 Profile
@@ -116,13 +151,15 @@ PHASE 7   排版交付   —— LaTeX→OMML 原生公式 + 三线表 → DOCX/P
 
 ---
 
-## 📦 Skills 清单（28 个）
+## 📦 Skills 清单（30 个）
 
 ### 🏗️ 自建核心架构
 
 | Skill | 用途 | 位置 |
 |-------|------|------|
 | **mathmodel-v2-pipeline** ⭐ | 数模竞赛全流程融合架构 v2.2（双模式/反馈环/确定性验证） | `skills/data-science/mathmodel-v2-pipeline/` |
+| **mathmodel-pipeline-v3** ⭐ | 数模管线执行手册 v3.1（55 题实战批测驱动：交付优先序/图密度≥5/灵敏度矩阵/数据辩护） | `skills/data-science/mathmodel-pipeline-v3/` |
+| **mathmodel-judge-perspective** ⭐ | 数模评委视角评价 v2.1（437 篇 O 奖精读 + 七维评分 + HARD FAIL 红线） | `skills/data-science/mathmodel-judge-perspective/` |
 | **multi-agent-pipeline** | 多 Agent 协同编程流水线（v2，含 Kimi K3） | `skills/multi-agent-pipeline/` |
 | **math-brainstorm** | 数模三人脑暴 | `skills/data-science/math-brainstorm/` |
 | **brute-force-think** | 暴力思考迭代收敛 | `skills/data-science/brute-force-think/` |
@@ -137,7 +174,7 @@ PHASE 7   排版交付   —— LaTeX→OMML 原生公式 + 三线表 → DOCX/P
 | **2analysis-modeling** | ② 分析 | 赛题分析与建模设计 |
 | **3coding-visual** | ③ 编码 | 代码实现 + 数据图表 |
 | **4drawio** | ③ 作图 | 流程图/架构图 |
-| **5writing** | ④ 论文 | Typst/LaTeX 撰写 |
+| **5writing** | ④ 论文 | Typst/LaTeX 撰写（含步骤 0.5 环境预检硬规则） |
 | **6verity** | ⑤ 验收 | 结构/数值/编译/视觉验收 |
 | **doctor** | 🔧 | 环境诊断修复 |
 | **typst-author** | 📝 | Typst 排版 |
@@ -231,6 +268,8 @@ Kimi K3 视觉审查依赖浏览器工具：
 openscore/
 ├── README.md                         ← 本文件
 ├── SOUL.md                           ← 全局行为宪法（296行）
+├── docs/
+│   └── batch-55-scores-2026-08.md    ← 55题全量实战批测成绩单
 ├── profiles/
 │   ├── glm-review/config.yaml        ← GLM 5.2 配置
 │   ├── kimi-coder/config.yaml        ← Kimi K2.7 配置
@@ -241,6 +280,8 @@ openscore/
     │   └── references/              ← 实战经验沉淀库
     ├── data-science/
     │   ├── mathmodel-v2-pipeline/    ← 数模全流程融合架构（v2.2 ⭐）
+    │   ├── mathmodel-pipeline-v3/    ← 数模管线执行手册（v3.1 ⭐，含流程图）
+    │   ├── mathmodel-judge-perspective/ ← 数模评委视角（v2.1 ⭐）
     │   ├── math-brainstorm/          ← 数模脑暴
     │   ├── brute-force-think/        ← 暴力思考
     │   ├── apk-forensics/            ← APK 取证
@@ -248,7 +289,7 @@ openscore/
     │   ├── 2analysis-modeling/       ← 分析建模
     │   ├── 3coding-visual/           ← 编码+图表
     │   ├── 4drawio/                  ← 流程图
-    │   ├── 5writing/                 ← 论文撰写
+    │   ├── 5writing/                 ← 论文撰写（环境预检 + LaTeX QA references）
     │   ├── 6verity/                  ← 验收
     │   ├── doctor/                   ← 环境诊断
     │   ├── typst-author/             ← Typst 排版
@@ -270,6 +311,7 @@ openscore/
 
 - Hermes Agent Desktop 已安装
 - 四个 Profile 已配置：`hermes profile list` 应显示 `default / glm-review / kimi-coder / kimi-ocr`
+- **（可选但推荐）LaTeX 编译环境**：数模论文排版需要。无 LaTeX 时 5writing 的步骤 0.5 环境预检会自动检测并引导安装 MiKTeX 便携版（见 `skills/data-science/5writing/references/latex-mcm-compile-qa.md`，清华镜像两步安装，免管理员）；临时兜底可用 Edge headless 打印 HTML → PDF
 
 ### 安装步骤
 
@@ -317,6 +359,11 @@ hermes profile list
 | 2026-07-27 | SOUL.md 大规模审计修复（9 项 P1/P2 缺陷修复） |
 | 2026-08-04 | SOUL.md 瘦身 14KB→6KB 任务路由版；新增开发前调研硬规则 |
 | 2026-08-09 | **mathmodel-v2-pipeline：数模全流程融合架构 v2.2**（调研 12+ 开源项目后沉淀：双模式/基准反馈环/数值验证门禁/五人评审团） |
+| 2026-08-10 | **评委 skill v1.0→v2.0 全题型版：437 篇 O 奖论文全量精读**（2012-2025，18 组 287KB 笔记；多模型互证/数字摘要/验证弱/数据缺 100% 铁律；HARD FAIL 扩展 10 项；题型差异速查 A-F） |
+| 2026-08-11 | **管线 v2.3→v3.0：六路线判别 A-F + 评审权重校准**（84→437 篇全量精读驱动，网络科学路线细化 2-A1~2-A6，数据预处理独立成章，多模型对比强制） |
+| 2026-08-12 | **🔥 55 题全量实战批测（管线 v3.1）**：2016-2025 全部真题独立求解 + 评委打分（平均 80.4，O×2），真实失败数据反推 6 条硬规则（交付优先序/图密度≥5/灵敏度矩阵/数据辩护/自查清单/分步落盘）——成绩单见 `docs/batch-55-scores-2026-08.md` |
+| 2026-08-12 | **🔥 实战验证闭环**：用 v2 架构 + 管线 v3.1 独立求解 2026 MCM Problem C（DWTS 粉丝投票反演），产出 19 页 LaTeX 模板论文；评委 skill v2.1 自评 92/100（O 档候选），发现并修复 4 类排版问题（代码块黑底/孤立页/图内中文/TotalPages） |
+| 2026-08-12 | **5writing 新增步骤 0.5 环境预检硬规则**：排版前强制检查 LaTeX/Typst 工具与模板可用性（缺则按 references 装 MiKTeX 便携版）；沉淀 LaTeX 编译 QA 全流程（黑底 bug/孤立页/数字一致性/Edge 兜底） |
 
 ---
 
