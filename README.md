@@ -26,7 +26,7 @@
 快速发散，收集不同模型的独立见解。
 
 ```
-GLM 5.2 + DeepSeek V4 + Kimi K3 → 并行构思
+GLM 5.3 + DeepSeek V4 + Kimi K3 → 并行构思
     → 每完成一方立即展示方案 + 优缺点
     → 三方汇总：共识 / 差异 / 优先级排序
     → 用户审阅后再进入编码
@@ -143,7 +143,7 @@ HARD FAIL 红线（任一命中直接降档）：
 | Profile | 模型 | 角色 | 核心能力 |
 |---------|------|------|---------|
 | **default** | DeepSeek V4 Pro | 🎯 编排者 | 派发任务、汇总结果、集成验证、最终交付 |
-| **glm-review** | GLM 5.2 | 🧠 架构师+审查员 | 项目架构分析、数学推理、代码逻辑审查 |
+| **glm-review** | GLM 5.3 | 🧠 架构师+审查员 | 项目架构分析、数学推理、代码逻辑审查 |
 | **kimi-coder** | Kimi K2.7 Coder | ⌨️ 编码员 | 代码生成（仅编码，禁用推理） |
 | **kimi-ocr** | Kimi K3 | 👁️ 视觉守门人 | UI/视觉架构分析、browser_vision 截图对比审查 |
 
@@ -271,7 +271,7 @@ openscore/
 ├── docs/
 │   └── batch-55-scores-2026-08.md    ← 55题全量实战批测成绩单
 ├── profiles/
-│   ├── glm-review/config.yaml        ← GLM 5.2 配置
+│   ├── glm-review/config.yaml        ← GLM 5.3 配置
 │   ├── kimi-coder/config.yaml        ← Kimi K2.7 配置
 │   └── kimi-ocr/config.yaml          ← Kimi K3 配置
 └── skills/

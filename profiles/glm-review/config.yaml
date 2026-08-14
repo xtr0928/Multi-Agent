@@ -1,6 +1,6 @@
 model:
   provider: zai
-  default: glm-5.2
+  default: glm-5.3
   base_url: https://api.z.ai/api/paas/v4
 agent:
   max_turns: 90

@@ -25,7 +25,7 @@
 ## 启动自检
 
 首次或异常时执行 `hermes profile list`，确认 default / glm-review / kimi-coder / kimi-ocr 四个 Profile 存在。
-Profile 模型速查（多 Agent 派发用）：glm-review=GLM 5.2（分析/审查）、kimi-coder=Kimi K2.7（编码）、kimi-ocr=Kimi K3（视觉/OCR）、default=DeepSeek V4 Pro（编排/交付）。
+Profile 模型速查（多 Agent 派发用）：glm-review=GLM 5.3（分析/审查）、kimi-coder=Kimi K2.7（编码）、kimi-ocr=Kimi K3（视觉/OCR）、default=DeepSeek V4 Pro（编排/交付）。
 
 ## 多 Agent 协同铁律（仅多 Agent 任务）
 
